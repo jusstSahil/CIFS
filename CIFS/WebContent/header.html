@@ -1,0 +1,33 @@
+<html>
+<head>
+<title></title>
+<script>
+var i = 0;
+var j = 0;
+var title = "Career Information Management System";
+var titlelen = title.length;
+var k;
+function scrollControl() {
+   scrollTitle();
+   if(j < titlelen){
+    clearTimeout(k);
+   }
+   j++;
+   k=setTimeout("scrollControl();",5)
+}
+
+function scrollTitle() {
+    var s = title.substring(0 ,i);
+    document.title = s;
+    i++;
+}
+scrollControl();
+</script>
+<body>
+<div align="center">
+<IMG src="./images/circlelogo.gif" width="200" height="200" align="left">
+<IMG src="career.jpg" width="200" height="200" align="center">
+<IMG src="./images/circlelogo.gif" width="200" height="200" align="right">
+<marquee bgcolor=pink> Career Information Management System</marquee>
+</body>
+</head>
